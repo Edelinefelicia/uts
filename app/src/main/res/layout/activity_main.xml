@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlinelogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03"/>
+
+        <ImageView
+            android:id="@+id/logoig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelogo"
+            android:src="@drawable/instagram_logo"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/lope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelogo"
+            app:layout_constraintEnd_toStartOf="@+id/share"
+            android:src="@drawable/ic_heart"
+            android:paddingHorizontal="16dp"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_share"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidlinebawahlogoscroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09"
+        />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@+id/guidlinebawahlogoscroll">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlinestory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+app:layout_constraintGuide_percent="0.01"            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineliststory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04"            />
+
+    <ImageView
+        android:id="@+id/story1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidlinestory"
+        app:layout_constraintStart_toStartOf="@id/guidlineliststory"
+        android:marginRight="10dp"
+        android:src="@drawable/user_story"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/story2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidlinestory"
+        app:layout_constraintStart_toEndOf="@id/story1"
+        android:src="@drawable/asset_story"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/story3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidlinestory"
+        app:layout_constraintStart_toEndOf="@id/story2"
+        android:src="@drawable/liga_story"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/story4"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidlinestory"
+        app:layout_constraintStart_toEndOf="@id/story3"
+        android:src="@drawable/asset_story"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/story5"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidlinestory"
+        app:layout_constraintStart_toEndOf="@id/story4"
+        android:src="@drawable/liga_story"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidlinenamastory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07"
+        />
+
+
+    <TextView
+        android:id="@+id/ceritaanda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidlinenamastory"
+        app:layout_constraintStart_toStartOf="@+id/guidlineliststory"
+        android:text="Cerita Anda"
+        android:paddingEnd="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/aset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidlinenamastory"
+        app:layout_constraintStart_toEndOf="@+id/ceritaanda"
+        android:text="Assets"
+        android:paddingEnd="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidlinestorytengah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.46"
+        />
+    <TextView
+        android:id="@+id/liga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidlinenamastory"
+        app:layout_constraintStart_toEndOf="@+id/guidlinestorytengah"
+        android:text="Liga"
+        android:paddingEnd="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidlinestorysamping1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.64"
+        />
+    <TextView
+        android:id="@+id/aset2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidlinenamastory"
+        app:layout_constraintStart_toEndOf="@+id/guidlinestorysamping1"
+        android:text="Assets"
+        android:paddingEnd="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidlinestorysamping2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"
+        />
+
+    <TextView
+        android:id="@+id/liga2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guidlinenamastory"
+        app:layout_constraintStart_toEndOf="@+id/guidlinestorysamping2"
+        android:text="Liga"
+        android:paddingEnd="20dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidlinefufafa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        />
+    <ImageView
+        android:id="@+id/akun1"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidlinefufafa"
+        app:layout_constraintStart_toStartOf="@id/guidlineliststory"
+        android:src="@drawable/fufufafa_pp"
+
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidlinenamafufafa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.22"
+        />
+    <TextView
+        android:id="@+id/fufufafanama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/guidlinefufafa"
+        app:layout_constraintStart_toEndOf="@+id/akun1"
+        android:text="Fufufafa"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/fufufafadesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fufufafanama"
+        app:layout_constraintStart_toEndOf="@+id/akun1"
+        app:layout_constraintBottom_toBottomOf="@+id/akun1"
+        android:text="putra Mulyono"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineakhirpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97"
+            />
+    <ImageView
+        android:id="@+id/dot3_1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidlinefufafa"
+        app:layout_constraintEnd_toEndOf="@id/guidlineakhirpage"
+        android:src="@drawable/ic_titik_tiga"
+
+        tools:ignore="MissingConstraints" />
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidlinefotofufafa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12"
+        />
+        <ImageView
+        android:id="@+id/fotofufufafa"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidlinefotofufafa"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/post_fufufafa"
+
+        tools:ignore="MissingConstraints" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlinelikefeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/fotofufufafa"
+            />
+        <ImageView
+            android:id="@+id/likepost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelikefeed"
+            app:layout_constraintStart_toEndOf="@id/guidlineliststory"
+            android:src="@drawable/ic_heart"
+            tools:ignore="MissingConstraints" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlinekomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12"
+            />
+        <ImageView
+            android:id="@+id/comenpost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelikefeed"
+            app:layout_constraintStart_toEndOf="@+id/guidlinekomen"
+            android:src="@drawable/ic_comment"
+            tools:ignore="MissingConstraints" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineshare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2"
+            />
+        <ImageView
+            android:id="@+id/sharepost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelikefeed"
+            app:layout_constraintStart_toEndOf="@+id/guidlineshare"
+            android:src="@drawable/ic_share"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelikefeed"
+            app:layout_constraintEnd_toEndOf="@id/guidlineakhirpage"
+            android:src="@drawable/ic_bookmark"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/dilikeoleh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/likepost"
+            app:layout_constraintStart_toEndOf="@id/guidlineliststory"
+            android:text="Disukai oleh Ikhwan_Hanif"
+            android:textSize="12sp"
+
+            android:layout_marginLeft="10dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/dilikeoleh"
+            app:layout_constraintStart_toEndOf="@id/guidlineliststory"
+            android:text="Fufufafa  #Proud"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tampilkankomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/guidlineliststory"
+            app:layout_constraintTop_toBottomOf="@id/caption"
+            android:text="tampilkan 10 komentar lainnya"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            tools:ignore="MissingConstraints" />
+
+
+<!--//post 2-->
+        <ImageView
+            android:id="@+id/akun2"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            app:layout_constraintTop_toBottomOf="@+id/tampilkankomen"
+            app:layout_constraintStart_toStartOf="@id/guidlineliststory"
+            android:src="@drawable/assets_ugm_pp"
+
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/post2nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tampilkankomen"
+            app:layout_constraintStart_toEndOf="@+id/akun2"
+            android:text="assets_ugm"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/post2desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/post2nama"
+            app:layout_constraintStart_toEndOf="@+id/akun2"
+            android:text="putra Mulyono"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/dot3_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="@+id/post2nama"
+            app:layout_constraintEnd_toEndOf="@id/guidlineakhirpage"
+            android:src="@drawable/ic_titik_tiga"
+
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/fotopost2"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toBottomOf="@+id/post2desc"
+            android:src="@drawable/post_asset"
+
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlinelikefeed2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/fotopost2"
+            />
+        <ImageView
+            android:id="@+id/likepost2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelikefeed2"
+            app:layout_constraintStart_toEndOf="@id/guidlineliststory"
+            android:src="@drawable/ic_heart"
+            tools:ignore="MissingConstraints" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlinekomen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12"
+            />
+        <ImageView
+            android:id="@+id/comenpost2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelikefeed2"
+            app:layout_constraintStart_toEndOf="@+id/guidlinekomen"
+            android:src="@drawable/ic_comment"
+            tools:ignore="MissingConstraints" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidlineshare2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.2"
+            />
+        <ImageView
+            android:id="@+id/sharepost2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelikefeed2"
+            app:layout_constraintStart_toEndOf="@+id/guidlineshare"
+            android:src="@drawable/ic_share"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/bookmark2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/guidlinelikefeed2"
+            app:layout_constraintEnd_toEndOf="@id/guidlineakhirpage"
+            android:src="@drawable/ic_bookmark"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/dilikeoleh2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/likepost"
+            app:layout_constraintStart_toEndOf="@id/guidlineliststory"
+            android:text="Disukai oleh Ikhwan_Hanif"
+            android:textSize="12sp"
+
+            android:layout_marginLeft="10dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/caption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/dilikeoleh2"
+            app:layout_constraintStart_toEndOf="@id/guidlineliststory"
+            android:text="Fufufafa  #Proud"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tampilkankomen1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintStart_toEndOf="@id/guidlineliststory"
+            app:layout_constraintTop_toBottomOf="@id/caption"
+            android:text="tampilkan 10 komentar lainnya"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#FFFFFF"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/iconhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="26dp"
+            android:src="@drawable/ic_home_active"/>
+        <ImageView
+            android:id="@+id/iconbawah2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="26dp"
+            android:src="@drawable/ic_search"/>
+        <ImageView
+            android:id="@+id/iconbawah3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="26dp"
+            android:src="@drawable/ic_upload"/>
+        <ImageView
+            android:id="@+id/iconbawah4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="26dp"
+            android:src="@drawable/ic_reels"/>
+        <ImageView
+            android:id="@+id/iconbawah5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="26dp"
+            android:src="@drawable/ic_profile"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
